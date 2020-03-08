@@ -1,10 +1,10 @@
 {
-  "name": "lewis-gatsby-starter-blog",
-  "description": "A custom Gatsby starter template to start a blog or personal website.",
-  "author": "@lewislbr",
+  "name": "michel-gondry-music-videos",
+  "description": "A website featuring Michel Gondry's music videos.",
+  "author": "@joedamiba",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lewislbr/lewis-gatsby-starter-blog"
+    "url": "https://github.com/jdamiba/michel-gondry-music-videos"
   },
   "version": "0.1.0",
   "license": "MIT",

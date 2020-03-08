@@ -1,17 +1,14 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
+import { Link, graphql } from 'gatsby';
 
 import { BREAKPOINT } from '../utils/constants';
 
 import {
   HeaderLogo,
   HeadingXL,
-  HeadingL,
   Layout,
   SEO,
-  TextBody,
-  TextDate,
 } from '../components';
 
 const Hero = styled.div`
@@ -51,32 +48,52 @@ const Post = styled.div`
 const Home = ({ data }) => {
   return (
     <>
-      <SEO title="Blog" />
+      <SEO title="Home" />
       <HeaderLogo />
       <Layout>
         <Hero>
-          <HeadingXL>Lewis Gatsby Starter Blog</HeadingXL>
-          <TextHome>
-            This is a custom Gatsby starter template to start a new blog or
-            personal website.
-          </TextHome>
+          <div className="flexbox">
+            <iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/S4UNcpWuQzM" frameborder="0" allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+          <div className="flexbox">
+            <iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/1Pk83NvyMsg" frameborder="0" allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+          <div className="flexbox">
+            <iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/HRPGFNPm0v4" frameborder="0" allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+          <div className="flexbox">
+            <iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/ZdlPuclC2oI" frameborder="0" allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+          <div className="flexbox">
+            <iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/EuuuIXBqReo" frameborder="0" allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+          <div className="flexbox">
+            <iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/ZaJC-TwH0ec" frameborder="0" allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+          <div className="flexbox">
+            <iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/yymYmzZPJe4" frameborder="0" allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+          <div className="flexbox">
+            <iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/PCJsGVNucgk" frameborder="0" allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+          <div className="flexbox">
+            <iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/9YnzeZvKVF4" frameborder="0" allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+          <div className="flexbox">
+            <iframe width="800" height="500" src="https://www.youtube-nocookie.com/embed/pZYrmwxI0rU" frameborder="0" allow="fullscreen; accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+           <div className="flexbox-stretch">
+          <Link to="/page2">
+        <p>Newer Videos &gt;&gt;</p>
+      </Link>
+      </div>
         </Hero>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <Link to={node.fields.slug} key={node.id}>
-            <Post>
-              <HeadingL>{node.frontmatter.title}</HeadingL>
-              <TextBody>{node.excerpt}</TextBody>
-              <TextDate>{node.frontmatter.date}</TextDate>
-            </Post>
-          </Link>
-        ))}
       </Layout>
     </>
   );
 };
 
 export default Home;
-
 export const query = graphql`
   query {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {

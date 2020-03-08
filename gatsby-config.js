@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Lewis Gatsby Starter Blog`,
-    description: `A custom Gatsby starter template to start a blog or personal website.`,
-    siteUrl: `https://lewis-gatsby-starter-blog.netlify.com`,
+    title: `Michel Gondry Music Videos`,
+    description: `A website featuring Michel Gondry's music videos.`,
+    siteUrl: `https://michel-gondry.now.sh`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

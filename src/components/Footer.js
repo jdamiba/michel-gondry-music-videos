@@ -6,7 +6,7 @@ import { BREAKPOINT } from '../utils/constants';
 
 const Container = styled.footer`
   font-size: 17px;
-  margin-top: 20vh;
+  margin-top: 5vh;
   padding-bottom: 10vh;
   padding-top: 5vh;
   text-align: left;
@@ -20,18 +20,11 @@ export const Footer = () => {
   return (
     <Container>
       <ButtonLink
-        href="https://mobile.twitter.com/lewislbr"
+        href="https://mobile.twitter.com/joedamiba"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Twitter
-      </ButtonLink>
-      <ButtonLink
-        href="https://github.com/lewislbr/lewis-gatsby-starter-blog"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Github
+        Developed with ❤️ by Joseph Damiba 
       </ButtonLink>
     </Container>
   );
